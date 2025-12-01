@@ -1,0 +1,18 @@
+//Write a program to find the HCF (GCD) of two numbers.
+#include<stdio.h>
+int main()
+{
+    int a, b, hcf, i;
+    printf("Enter two positive integers: ");
+    scanf("%d %d", &a, &b);
+    // HCF is the largest number that divides both a and b
+    for(i = 1; i <= a && i <= b; i++)
+    {
+        if(a % i == 0 && b % i == 0)
+        {
+            hcf = i; // Update hcf if i divides both a and b
+        }
+    }
+    printf("HCF (GCD) of %d and %d is: %d       \n", a, b, hcf);
+    return 0;
+}
